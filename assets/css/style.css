@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Cabeçalho */
+header{
+    display: flex;
+    background: rgb(29,29,29);
+    background: linear-gradient(90deg, rgba(29,29,29,1) 61%, rgba(242,98,46,1) 62%, rgba(191,30,15,1) 100%); 
+    
+}
+header #card{
+    margin: auto;
+    padding: auto;
+}
+header #card h1{
+    color:#F2622E;
+    font-weight: 700;
+    font-size: 3rem;
+}
+header #card span , p{
+    color: #ccc;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+header #card button{
+    background-color: rgba(29,29,29,1);
+    border: rgba(242,98,46,1) solid 1px ;
+    border-radius: 2px;
+    color: #F2622E;
+    padding: .5rem ;
+    margin-top: 1rem;
+    transition: .3s ease-out;
+    font-weight: 600;
+
+}
+header #card button:hover{
+    background-color: #F2622E;
+    color: rgba(29,29,29,1);
+    transform: scale(1.1);
+}
+header img{
+  position: relative;
+  right: 12rem;
+}
+/* cabeçalho */
+/* Sobre mim */
+#about{
+    
+}
