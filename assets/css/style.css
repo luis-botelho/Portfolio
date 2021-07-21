@@ -7,8 +7,12 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    background-color: rgba(29,29,29,1);
+}
 /* Cabeçalho */
 header{
+    height: 25%;
     display: flex;
     background: rgb(29,29,29);
     background: linear-gradient(90deg, rgba(29,29,29,1) 61%, rgba(242,98,46,1) 62%, rgba(191,30,15,1) 100%); 
@@ -37,7 +41,6 @@ header #card button{
     margin-top: 1rem;
     transition: .3s ease-out;
     font-weight: 600;
-
 }
 header #card button:hover{
     background-color: #F2622E;
@@ -51,5 +54,306 @@ header img{
 /* cabeçalho */
 /* Sobre mim */
 #about{
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    height: 25%;
+}
+#about .aboutCard{
+    margin: auto;
+    width: 30rem;
+}
+#about .aboutCard h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+#about .aboutCard hr{
+    color: #F2622E;
+    margin-bottom: 2rem;
+    width: 6rem;
+}
+#about .extraBorder{
+    border: .5rem solid #F2622E;
+    margin-left: 10%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    width: 25vw;
+    height: 60vh;
+    position: relative;
+    color: rgba(29, 29, 29, 0);
+}
+#about img{
+    border: .5rem solid rgb(29, 29, 29);
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+    width: 100%;
+    height: 60vh;
+}
+#about .btnProjects{
+    background-color: #f2622e;
+    border: rgba(242,98,46,1) solid 1px ;
+    border-radius: 2px;
+    color: rgba(29,29,29,1);
+    padding: .5rem ;
+    margin-top: 1rem;
+    transition: .3s ease-out;
+    font-weight: 600;
+}
+#about .btnProjects:hover{
+    
+    transform: scale(1.1);
+}
+#about .btnContact{
+    background-color: rgba(29,29,29,1);
+    border: rgba(242,98,46,1) solid 1px ;
+    border-radius: 2px;
+    color: #F2622E;
+    padding: .5rem ;
+    margin-top: 1rem;
+    margin-left: .1rem;
+    transition: .3s ease-out;
+    font-weight: 600;
+}
+#about .btnContact:hover{
+    
+    transform: scale(1.1);
+}
+/* sobre mim */
+/* projetos */
+#projects{
+    background-color: rgba(29,29,29,1);
+}
+#projects .projectsCard{
+    
+    margin-left: 14.5rem;
+    width: 40%;
+
+}
+#projects .projectsCard h2{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+#projects .projectsCard hr{
+    color: #F2622E;
+    margin-bottom: 2rem;
+    width: 6rem;
+}
+#projects .exemple{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    justify-items: center;
+    
     
 }
+#projects .project{
+    width: 30vw;
+    margin: 2rem;
+    text-align: center;
+    border: 1px solid #F2622E;
+    transition: .3s ease-out;
+    box-shadow: 10px 5px 5px black;
+    padding: 1rem;
+}
+#projects .project:hover{
+    transform: scale(1.01);
+    
+}
+#projects .project h3{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem ;
+}
+#projects .project p{
+   margin: 1rem;
+}
+#projects .project button{
+    background-color: #f2622e;
+    border: rgba(242,98,46,1) solid 1px ;
+    border-radius: 2px;
+    color: rgba(29,29,29,1);
+    padding: .5rem ;
+    margin-top: 1rem;
+    transition: .3s ease-out;
+    font-weight: 600;
+}
+#projects .project button:hover{
+    background-color: rgba(29,29,29,1);
+    color: #F2622E;
+    transform: scale(1.1);
+}
+#abiliity{
+    padding: 3rem 10rem 3rem 10rem;
+    background-color: #292929;
+}
+#abiliity h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+#abiliity p{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+}
+.fa-html5{
+    font-size: 2rem;
+    color: orangered;
+}
+.fa-css3-alt{
+    font-size: 2rem;
+    color: rgb(0, 110, 255);
+}
+.fa-python{
+    font-size: 2rem;
+    color: rgb(155, 206, 13);
+}
+.fa-contao{
+    font-size: 2rem;
+    color: rgb(89, 0, 255);
+}
+.barra{
+    display: flex;
+    border: 1px solid #f2622e;
+    border-radius: 1rem;
+}
+.html{
+    background-color: #f2622e;
+    color: white;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 70%;
+}
+.css{
+    background-color: #f2622e;
+    color: white;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 40%;
+}
+.python{
+    background-color: #f2622e;
+    color: white;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 80%;
+}
+.c{
+    background-color: #f2622e;
+    color: white;
+    text-align: center;
+    padding: .3rem;
+    border-radius: 1rem;
+    width: 30%;
+}
+/* Seção de contato */
+
+section#contact {
+    padding: 3rem 10rem 3rem 10rem; /* Sentido horario: Cima, direita , baixo, esquerda */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Quebra o conteúdo para a próxima linha caso não haja mais espaço para esse conteúdo na tela */
+ }
+ 
+ section#contact div#network{
+    width: 100%; /* Faz com que a div rede ocupe 100% do espaço na tela */
+ }
+ 
+ section#contact div#network h3{
+    text-align: center; /* Alinhamento centralizado do texto */
+    font-size: 2.5rem; /* Tamanho da fonte do elemento */
+    margin-bottom: 2rem; /* Margem para baixo do elemento */
+ }
+ 
+ section#contact div#network div#icons{
+    display: flex;
+    justify-content: center;
+ }
+ 
+ section#contact div#network div#icons a{
+    text-decoration: none; /* Tira o sublinhado e toda decoração de texto do link */
+    color: #0066ff;
+    font-size: 4rem;
+    padding: 2rem;
+    transition: all .4s ease-out; /*  Suavisa a transição de cores no hover */
+ }
+ 
+ /* o :hover serve para quando passar o mouse por cima do elemento fazer algo */
+ section#contact div#network div#icons a:hover{
+    color: #71aaff;
+ }
+ 
+ section#contact div#network div#icons a i{
+    transition: all .4s ease-out;
+ }
+ 
+ section#contact div#network div#icons a i:hover{
+    transform: scale(1.2);
+ }
+ 
+ section#contact div#form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ 
+ section#contact div#form h3{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+ }
+ 
+ section#contact div#form form{
+    width: 50%;
+ }
+ 
+ /* A virgula serve para estilizar dois elementos ao mesmo tempo */
+ section#contact div#form form input, textarea{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    outline: none; /* Retira a borda do input quando clico dentro dele */
+ }
+ 
+ section#contact div#form form label{
+    font-size: 1.2rem;
+ }
+ 
+ section#contact div#form form button{
+    border: 1px solid #3359ec;
+    background-color: #fff;
+    color: #3359ec;
+    padding: 1rem;
+    font-size: .8vw;
+    font-weight: 600;
+    border-radius: .5rem;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .6s ease-out;
+    width: 40%;
+ }
+ 
+ section#contact div#form form button:hover{
+    background-color: #3359ec;
+    color: #fff;
+    transform: scale(1.2);
+ }
