@@ -10,16 +10,94 @@ html{
 body{
     background-color: rgba(29,29,29,1);
 }
-/* Cabeçalho */
-header{
-    height: 25%;
+/* Navegador tamanho desktop*/
+#desktop{
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem 1rem 0rem;
+    transition: all 500ms linear;
+    height: 2rem;
+    z-index:11;
+}
+#desktop .menu{
     display: flex;
-    background: rgb(29,29,29);
-    background: linear-gradient(90deg, rgba(29,29,29,1) 61%, rgba(242,98,46,1) 62%, rgba(191,30,15,1) 100%); 
+    justify-content: center;
+    align-items: center;
     
 }
+#desktop .menuItem li{
+    list-style: none;
+    background-color: #292929;
+    border: 1px solid #f2622e;
+    border-radius: .2rem;
+    padding: .3rem;
+ 
+}
+#desktop .menuItem {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    margin: .2rem .5rem ;
+}
+/* Navegador desktop*/
+
+/* Navegador caso seja mobile */
+#mobile{
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem 1rem 0rem;
+    transition: all 500ms linear;
+    height: 2rem;
+    z-index:11;
+}
+#mobile .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#mobile .menuItem li{
+    list-style: none;
+    background-color: #292929;
+    border: 1px solid #f2622e;
+    border-radius: .2rem;
+    padding: .3rem;
+ 
+}
+#mobile .menuItem {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    margin: .2rem .5rem ;
+}
+@media screen and (max-width: 600px){
+    #mobile{
+        display: block;
+    }
+    #desktop{
+        display: none;
+    }
+}
+/* navegador mobile */
+/* Cabeçalho */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(29,29,29);
+    background: linear-gradient(90deg, rgba(29,29,29,1) 61%, rgba(242,98,46,1) 62%, rgba(191,30,15,1) 100%); 
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1054px){
+    header{background:rgba(29,29,29,1);}
+}
 header #card{
-    margin: auto;
+    display: block;
+    margin: 12rem 3rem;
     padding: auto;
 }
 header #card h1{
@@ -48,18 +126,25 @@ header #card button:hover{
     transform: scale(1.1);
 }
 header img{
-  position: relative;
-  right: 12rem;
+    width: 20%;
+    height: 30%;
 }
+@media screen and (max-width: 600px) {
+    header img {
+      display: none;
+    }
+  }
 /* cabeçalho */
 /* Sobre mim */
 #about{
     background-color: rgb(41, 41, 41);
     display: flex;
-    height: 25%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 #about .aboutCard{
-    margin: auto;
+    margin: auto 3rem;
     width: 30rem;
 }
 #about .aboutCard h2{
@@ -74,22 +159,28 @@ header img{
 }
 #about .extraBorder{
     border: .5rem solid #F2622E;
-    margin-left: 10%;
-    margin-top: 12%;
-    margin-bottom: 10%;
-    width: 25vw;
-    height: 60vh;
-    position: relative;
+    margin: 10rem 8rem;
+    width: 15rem;
+    height: 20rem;
     color: rgba(29, 29, 29, 0);
+}
+@media screen and (max-width: 600px){
+    #about .extraBorder{
+        width: 200px;
+        margin: 10rem auto;
+    }
+    
 }
 #about img{
     border: .5rem solid rgb(29, 29, 29);
     position: relative;
-    bottom: 30px;
-    left: 30px;
+    bottom: 2rem;
+    left: 1rem;
     width: 100%;
-    height: 60vh;
+    height: 20rem;
+    z-index: 10;
 }
+
 #about .btnProjects{
     background-color: #f2622e;
     border: rgba(242,98,46,1) solid 1px ;
@@ -97,11 +188,11 @@ header img{
     color: rgba(29,29,29,1);
     padding: .5rem ;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     transition: .3s ease-out;
     font-weight: 600;
 }
 #about .btnProjects:hover{
-    
     transform: scale(1.1);
 }
 #about .btnContact{
@@ -116,7 +207,6 @@ header img{
     font-weight: 600;
 }
 #about .btnContact:hover{
-    
     transform: scale(1.1);
 }
 /* sobre mim */
@@ -266,7 +356,7 @@ section#contact {
     padding: 3rem 10rem 3rem 10rem; /* Sentido horario: Cima, direita , baixo, esquerda */
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Quebra o conteúdo para a próxima linha caso não haja mais espaço para esse conteúdo na tela */
+    flex-wrap: flex;/* Quebra o conteúdo para a próxima linha caso não haja mais espaço para esse conteúdo na tela */
  }
  
  section#contact div#network{
@@ -274,9 +364,11 @@ section#contact {
  }
  
  section#contact div#network h3{
-    text-align: center; /* Alinhamento centralizado do texto */
+     /* Alinhamento centralizado do texto */
     font-size: 2.5rem; /* Tamanho da fonte do elemento */
     margin-bottom: 2rem; /* Margem para baixo do elemento */
+    color: #ccc;
+    width: 100%;
  }
  
  section#contact div#network div#icons{
@@ -286,15 +378,15 @@ section#contact {
  
  section#contact div#network div#icons a{
     text-decoration: none; /* Tira o sublinhado e toda decoração de texto do link */
-    color: #0066ff;
+    color: #f2622e;
     font-size: 4rem;
-    padding: 2rem;
+    padding-left: 2rem;
     transition: all .4s ease-out; /*  Suavisa a transição de cores no hover */
  }
  
  /* o :hover serve para quando passar o mouse por cima do elemento fazer algo */
  section#contact div#network div#icons a:hover{
-    color: #71aaff;
+    color: #f57c50;
  }
  
  section#contact div#network div#icons a i{
@@ -310,12 +402,18 @@ section#contact {
     justify-content: center;
     flex-wrap: wrap;
  }
- 
+
+ section#contact div#network hr{
+    color: #F2622E;
+    margin-bottom: 2rem;
+    width: 6rem;
+ }
  section#contact div#form h3{
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color:#ccc;
  }
  
  section#contact div#form form{
@@ -335,14 +433,15 @@ section#contact {
  
  section#contact div#form form label{
     font-size: 1.2rem;
+    color: #ccc;
  }
  
  section#contact div#form form button{
-    border: 1px solid #3359ec;
-    background-color: #fff;
-    color: #3359ec;
+    border: 1px solid rgba(242,98,46,1);
+    background-color: #f2622e;
+    color: rgb(29, 29, 29,1);
     padding: 1rem;
-    font-size: .8vw;
+    font-size: 1vw;
     font-weight: 600;
     border-radius: .5rem;
     display: block;
@@ -353,7 +452,126 @@ section#contact {
  }
  
  section#contact div#form form button:hover{
-    background-color: #3359ec;
-    color: #fff;
+    background-color: rgb(41, 41, 41);
+    color: #F2622E;
     transform: scale(1.2);
  }
+ footer p {
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer hr {
+    width: 60%;
+    margin: auto;
+    border: 0.2px solid #f2622e;
+  }
+  
+  footer a#luis {
+    text-decoration: none;
+    color: #F2622E;
+  }
+  
+  footer a#luis:hover {
+    color: #ff01ed;
+  }
+  
+  footer {
+    margin-top: 3rem;
+  }
+/* Loader de carregamento */
+
+section#contact div#carregamento{
+    display: none; /* Deixa o display none para não aparecer até que você clique no botão enviar (ver JS) */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    width: 100%;
+    
+  }
+  
+section#contact div#carregamento p{
+    color: #F2622E;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+  
+section#contact div#carregamento div#loader{
+    border: 13px solid #fff;
+    border-radius: 50%;
+    border-top: 13px solid #f2622e;
+    border-bottom: 13px solid #f2622e;
+    width: 80px;
+    height: 80px;
+    /* Anima o elemento div#loader criando a variável spin, em 2s de forma linear e infinita */
+    animation: spin 2s linear infinite;
+}
+  
+  /* Anima a variável spin do animation */
+@keyframes spin {
+    0% {  /* Começa em 0% */
+    transform: rotate(0deg); /* Rotação do elemento no 0° */ 
+} 
+100% { /* Vai até 100% */
+    transform: rotate(360deg); /* Rotação do elemento em 360° */ 
+}
+}
+  
+  /* Loader de carregamento */
+/* Página Send */
+
+section#success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(29,29,29,1);
+    margin-top: 5%;
+  }
+  
+  section#success div#card{
+    background-color: rgb(41, 41, 41);
+    text-align: center;
+    padding: 4rem;
+    border-radius: 2rem;
+    color: #f2622e;
+    width: 40%;
+  }
+  
+  section#success div#card h1{
+    margin: 2rem 0rem;
+  }
+  
+  section#success div#card i{
+    font-size: 5rem;
+    color: rgb(0,88,0);
+  }
+  
+  section#success div#card h3{
+    margin-bottom: 2rem;
+  }
+  
+  section#success div#card p{
+    margin-bottom: 3rem;
+    width: 100%;
+    word-break: break-word;
+  }
+  
+  section#success div#card a{
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid #f2622e;
+    color:#f2622e;
+    border-radius: .4rem;
+    transition: all .4s ease-out;
+  }
+  
+  section#success div#card a:hover{
+    background-color: #f2622e;
+    color: #fff;
+  }  
