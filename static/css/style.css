@@ -379,35 +379,44 @@ header img{
 
 /* Seção de contato */
 
-#contact {
-    padding: 3rem 10rem 3rem 10rem; 
+#contact { 
     display: flex;
     justify-content: center;
-    flex-wrap: flex;
- }
- 
+    align-items: center;
+    flex-wrap: wrap;
+}
 /* Redes sociais */
 #network{
     width: 100%;
+    padding: 6rem 0rem 1rem 6rem;
 }
- 
 #network h3{
     font-size: 2.5rem;
-    margin-bottom: 2rem;
     color: #ccc;
     width: 100%;
+}
+#network hr{
+    color: #F2622E;
+    margin-bottom: 2rem;
+    width: 6rem;
+}
+#network p{
+    margin-bottom: 1.5rem;
 }
 /* Icones das redes sociais */
 #icons{
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: auto;
 }
 #icons a{
     text-decoration: none;
     color: #f2622e;
-    font-size: 4rem;
+    font-size: 3rem;
     padding-left: 2rem;
-    transition: all .4s ease-out;}
+    transition: all .4s ease-out;
+}
 #icons a:hover{
     color: #f57c50;
 }
@@ -419,40 +428,41 @@ header img{
 #icons a i:hover{
     transform: scale(1.2);
 }
- /* Formulário  */
+
+/* Formulário  */
 #form{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    padding: 0rem 1rem 1rem 6rem;
 }
-#network hr{
-    color: #F2622E;
-    margin-bottom: 2rem;
+#form hr{
     width: 6rem;
+    color: #f2622e;
+    align-self: left;
+    margin-bottom: 2rem;
 }
 #form h3{
     width: 100%;
-    text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
     color:#ccc;
 } 
+#form p{
+    margin-bottom: 1.5rem;
+}
 #form form{
-    width: 50%;
+    width: 85%;
 }
 #form form input, textarea{
     width: 100%;
     padding: .5rem;
     font-size: 1.2rem;
     border: 1px solid #ccc;
-    margin-top: .5rem;
-    margin-bottom: 1rem;
+    margin: .5rem 0rem 1rem 0rem;
     outline: none;
 }
- 
 #form form label{
     font-size: 1.2rem;
     color: #ccc;
+    width: 100%;
 }
 #form form button{
     border: 1px solid rgba(242,98,46,1);
