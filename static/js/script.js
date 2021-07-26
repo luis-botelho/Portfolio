@@ -2,7 +2,6 @@ let inputNome = document.querySelector('#nome')
 let inputEmail = document.querySelector('#email') 
 let textareaMensagem = document.querySelector('#mensagem')
 let btnEnviar = document.querySelector('#enviar')
-
 let nomeOk = false
 let emailOk = false 
 let msgOk = false 

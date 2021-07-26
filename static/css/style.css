@@ -406,9 +406,9 @@ header img{
 /* Icones das redes sociais */
 #icons{
     display: flex;
-    justify-content: center;
+    
     width: 100%;
-    margin: auto;
+    
 }
 #icons a{
     text-decoration: none;
@@ -449,7 +449,7 @@ header img{
     margin-bottom: 1.5rem;
 }
 #form form{
-    width: 85%;
+    width: 95%;
 }
 #form form input, textarea{
     width: 100%;
@@ -477,6 +477,7 @@ header img{
     cursor: pointer;
     transition: .6s ease-out;
     width: 40%;
+    
 }
 #form form button:hover{
     background-color: rgb(41, 41, 41);
@@ -492,7 +493,7 @@ footer p {
 }
   
 footer hr {
-    width: 60%;
+    width: 80%;
     margin: auto;
     border: 0.2px solid #f2622e;
 }
@@ -564,16 +565,16 @@ footer {
 }
 #card h1{
     margin: 2rem 0rem;
-  }
+}
   
 #card i{
     font-size: 5rem;
     color: rgb(0,88,0);
-  }
+}
   
 #card h3{
     margin-bottom: 2rem;
-  }
+}
   
 #card p{
     margin-bottom: 3rem;
