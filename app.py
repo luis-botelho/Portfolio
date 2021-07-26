@@ -8,13 +8,11 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": '',
-    "MAIL_PASSWORD": ''
+    "MAIL_USERNAME": 'kwaibotelho@gmail.com',
+    "MAIL_PASSWORD": 'senhanova123'
 }
 app.config.update(mail_settings)
-
 mail = Mail(app)
-
 class Contato:
     def __init__(self, nome, email, mensagem):
         self.nome = nome
