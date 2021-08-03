@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://kit.fontawesome.com/7515ad9b6d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Imagem</th>
+                <th>Link</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for p in projetos %}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.nome}}</td>
+                <td>{{p.imagem}}</td>
+                <td>{{p.link}}</td>
+                <td>{{p.descricao}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <script src="../static/js/adm.js"></script>
+
+</body>
+
+</html>
