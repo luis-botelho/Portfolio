@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/adm.css">
     <script src="https://kit.fontawesome.com/7515ad9b6d.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul class=flashes>
@@ -22,8 +21,39 @@
     {% endif %}
     {% endwith %}
 
-    <table>
+    <article id="new">
+            {% if projeto == '' %}
+            <form action='/new' method="POST">
+                <h1>Cadastre um novo projeto</h1>
+            {% else %}
+            <form action='/new/' method="POST">
+                <h1>Atualize o projeto</h1>
+            {% endif %}   
+<!--  -->
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome do projeto" id="nome" name="nome" >
 
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" >
+
+                <label for="link">Link</label>
+                <input type="text" placeholder="Link do projeto" id="link" name="link" >
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto">
+                   
+                </textarea>
+                <button type="submit">
+                    {% if projeto == '' %}
+                    Enviar
+                    {% else %}
+                    Atualizar
+                    {% endif %}
+                </button>
+            </form>
+    </article>
+    <table>
         <thead>
             <tr>
                 <th>#</th>
@@ -33,7 +63,6 @@
                 <th>Descrição</th>
             </tr>
         </thead>
-
         <tbody>
             {% for p in projetos %}
             <tr>
@@ -42,10 +71,12 @@
                 <td>{{p.imagem}}</td>
                 <td>{{p.link}}</td>
                 <td>{{p.descricao}}</td>
+                <td>
+                    <a href="/delete/{{p.id}}">apagar</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
-
     </table>
 
     <script src="../static/js/adm.js"></script>
